@@ -2,11 +2,9 @@
   "compilerOptions": {
     "module": "commonjs", // node.js를 평범하게 사용하고 다양한건 import, export 할 수 있게 해줌,
     "target": "ES2015", // 어떤 버전의 자바스크립트로 컴파일 되고 싶은지를 기록
-    "sourceMap": true // 번들 파일 내의 코드를 원래 소스 파일로 매핑 시킬지 여부
+    "sourceMap": true, // 번들 파일 내의 코드를 원래 소스 파일로 매핑 시킬지 여부
+    "outDir": "dist" //ts는 모두 scr 폴더로 넣고, 컴파일된 파일은 모두 dist 폴더
   },
-  "include": [
-    // 컴파일 과정에 포함할 파일을 배열로 저장
-    "index.ts"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"] // 제외할 파일
 }
